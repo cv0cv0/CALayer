@@ -12,19 +12,23 @@ class ViewController: UIViewController {
     private let slider = UISlider()
     private let progressLayers = [
         ProgressLayer1(),
-        ProgressLayer(),
-        ProgressLayer(),
-        ProgressLayer()
+        ProgressLayer1(),
+        ProgressLayer1(),
+        ProgressLayer1(),
+        ProgressLayer1(),
+        ProgressLayer1(),
+        ProgressLayer1(),
+        ProgressLayer1()
     ]
     
-    private let top = 110
+    private let top = 140
     private let size = 100
     private let hCount = 2
-    private let vSpace = 30
+    private let vSpace = 40
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        slider.value = 0.89
+        slider.value = 0.85
         slider.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
         view.addSubview(slider)
         
@@ -80,8 +84,8 @@ class ProgressLayer: CALayer {
     
     override func layoutSublayers() {
         super.layoutSublayers()
-        let textHeight = NSString(string: "100%").boundingRect(with: CGSize(width: CGFloat.infinity, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)], context: nil).height
-        textLayer.frame = CGRect(x: 0, y: frame.height / 2 - textHeight / 2, width: frame.width, height: textHeight)
+        let textBound = NSString(string: "100%").boundingRect(with: CGSize(width: CGFloat.infinity, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)], context: nil)
+        textLayer.frame = CGRect(x: frame.width / 2 - textBound.width / 2, y: frame.height / 2 - textBound.height / 2, width: textBound.width, height: textBound.height)
     }
 }
 
