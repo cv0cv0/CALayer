@@ -1,0 +1,26 @@
+//
+//  ProgressLayer2.swift
+//  CALayer
+//
+//  Created by 关蕤 on 2019/3/11.
+//  Copyright © 2019 GR. All rights reserved.
+//
+
+import UIKit
+
+class ProgressLayer2: ProgressLayer {
+    
+    override func draw(in ctx: CGContext) {
+        let radius = frame.width * 0.45
+        let center = CGPoint(x: frame.width / 2, y: frame.height / 2)
+        let endAngle = 2 * CGFloat.pi * CGFloat(number) - CGFloat.pi / 2
+        
+        ctx.setFillColor(UIColor.orange.cgColor)
+        
+        ctx.move(to: center)
+        ctx.addLine(to: CGPoint(x: center.x, y: frame.height * 0.05))
+        ctx.addArc(center: center, radius: radius, startAngle: -CGFloat.pi / 2, endAngle: endAngle, clockwise: false)
+        ctx.closePath()
+        ctx.fillPath()
+    }
+}

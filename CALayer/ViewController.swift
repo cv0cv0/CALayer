@@ -12,13 +12,9 @@ class ViewController: UIViewController {
     private let slider = UISlider()
     private let progressLayers = [
         ProgressLayer1(),
-        ProgressLayer1(),
-        ProgressLayer1(),
-        ProgressLayer1(),
-        ProgressLayer1(),
-        ProgressLayer1(),
-        ProgressLayer1(),
-        ProgressLayer1()
+        ProgressLayer2(),
+        ProgressLayer3(),
+        ProgressLayer4()
     ]
     
     private let top = 140
@@ -54,53 +50,5 @@ class ViewController: UIViewController {
         progressLayers.forEach { progressLayer in
             progressLayer.number = slider.value
         }
-    }
-}
-
-class ProgressLayer: CALayer {
-    private let textLayer = CATextLayer()
-    
-    var number: Float = 0.0 {
-        didSet {
-            textLayer.string = String(format: "%.0lf%%", number * 100)
-            textLayer.setNeedsDisplay()
-            setNeedsDisplay()
-        }
-    }
-    
-    override init() {
-        super.init()
-        textLayer.contentsScale = UIScreen.main.scale
-        textLayer.fontSize = 14
-        textLayer.foregroundColor = UIColor.black.cgColor
-        textLayer.alignmentMode = CATextLayerAlignmentMode.center
-        textLayer.isWrapped = true
-        addSublayer(textLayer)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func layoutSublayers() {
-        super.layoutSublayers()
-        let textBound = NSString(string: "100%").boundingRect(with: CGSize(width: CGFloat.infinity, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)], context: nil)
-        textLayer.frame = CGRect(x: frame.width / 2 - textBound.width / 2, y: frame.height / 2 - textBound.height / 2, width: textBound.width, height: textBound.height)
-    }
-}
-
-class ProgressLayer1: ProgressLayer {
-    
-    override func draw(in ctx: CGContext) {
-        let radius = frame.width * 0.45
-        let center = CGPoint(x: frame.width / 2, y: frame.height / 2)
-        let endAngle = 2 * CGFloat.pi * CGFloat(number) - CGFloat.pi / 2
-        
-        ctx.setStrokeColor(UIColor.purple.cgColor)
-        ctx.setLineWidth(frame.width * 0.05)
-        ctx.setLineCap(CGLineCap.round)
-        
-        ctx.addArc(center: center, radius: radius, startAngle: -CGFloat.pi / 2, endAngle: endAngle, clockwise: false)
-        ctx.strokePath()
     }
 }

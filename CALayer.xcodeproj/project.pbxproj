@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3937629D2235E1D000FDD6CB /* ProgressLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3937629C2235E1D000FDD6CB /* ProgressLayer.swift */; };
+		3937629F2235E28000FDD6CB /* ProgressLayer1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3937629E2235E28000FDD6CB /* ProgressLayer1.swift */; };
+		393762A22235EB7E00FDD6CB /* ProgressLayer2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393762A12235EB7E00FDD6CB /* ProgressLayer2.swift */; };
+		393762A42235F46100FDD6CB /* ProgressLayer4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393762A32235F46100FDD6CB /* ProgressLayer4.swift */; };
+		393762A62235FA9C00FDD6CB /* ProgressLayer3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393762A52235FA9C00FDD6CB /* ProgressLayer3.swift */; };
 		397FB64F22349A800079E3CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397FB64E22349A800079E3CA /* AppDelegate.swift */; };
 		397FB65122349A800079E3CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397FB65022349A800079E3CA /* ViewController.swift */; };
 		397FB65422349A800079E3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397FB65222349A800079E3CA /* Main.storyboard */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3937629C2235E1D000FDD6CB /* ProgressLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLayer.swift; sourceTree = "<group>"; };
+		3937629E2235E28000FDD6CB /* ProgressLayer1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLayer1.swift; sourceTree = "<group>"; };
+		393762A12235EB7E00FDD6CB /* ProgressLayer2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLayer2.swift; sourceTree = "<group>"; };
+		393762A32235F46100FDD6CB /* ProgressLayer4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLayer4.swift; sourceTree = "<group>"; };
+		393762A52235FA9C00FDD6CB /* ProgressLayer3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLayer3.swift; sourceTree = "<group>"; };
 		397FB64B22349A800079E3CA /* CALayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CALayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		397FB64E22349A800079E3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		397FB65022349A800079E3CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +45,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		393762A02235E71800FDD6CB /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				3937629C2235E1D000FDD6CB /* ProgressLayer.swift */,
+				3937629E2235E28000FDD6CB /* ProgressLayer1.swift */,
+				393762A12235EB7E00FDD6CB /* ProgressLayer2.swift */,
+				393762A52235FA9C00FDD6CB /* ProgressLayer3.swift */,
+				393762A32235F46100FDD6CB /* ProgressLayer4.swift */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
 		397FB64222349A7F0079E3CA = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +76,7 @@
 		397FB64D22349A800079E3CA /* CALayer */ = {
 			isa = PBXGroup;
 			children = (
+				393762A02235E71800FDD6CB /* Layer */,
 				397FB64E22349A800079E3CA /* AppDelegate.swift */,
 				397FB65022349A800079E3CA /* ViewController.swift */,
 				397FB65222349A800079E3CA /* Main.storyboard */,
@@ -135,7 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393762A62235FA9C00FDD6CB /* ProgressLayer3.swift in Sources */,
+				3937629D2235E1D000FDD6CB /* ProgressLayer.swift in Sources */,
+				393762A42235F46100FDD6CB /* ProgressLayer4.swift in Sources */,
 				397FB65122349A800079E3CA /* ViewController.swift in Sources */,
+				3937629F2235E28000FDD6CB /* ProgressLayer1.swift in Sources */,
+				393762A22235EB7E00FDD6CB /* ProgressLayer2.swift in Sources */,
 				397FB64F22349A800079E3CA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
